@@ -1,1 +1,24 @@
+<div id="main-container">
+ <div class="container">
+   <div class="row">
+     <table class="table table-bordered" arrow-selector>
+       <tr>
+         <th>#</th>
+         <th>Name</th>
+         <th>Team</th>
+         <th>Position</th>
+       </tr>
+       <tr id="row_{{$index}}" ng-repeat="team in teamItems" ng-class="{ 'selected':$index == selectedRow }" ng-click="setClickedRow($index)">
+         <td>{{$index}}</td>
+         <td>{{team.name}}</td>
+         <td>{{team.team}}</td>
+         <td>{{team.position}}</td>
+       </tr>
+     </table>
 
+     <div>
+       selectedRow = {{selectedRow}}
+     </div>
+   </div>
+ </div>
+</div>
